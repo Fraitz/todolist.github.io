@@ -10,19 +10,50 @@ body {
   background-color: rgb(236 , 236 , 236);
 }
 
-header {
-  margin-left: 37%;
+
+@media screen and (max-width:100vw) {
+  header {
+    margin-left: 37%;
+  }
+
+  main {
+    /* float: right; */
+    margin-left: 35%;
+    display: inline-block;
+    width: 100vw;
+  }
+  
+  ol {
+    display: inline-block;
+    margin: 5px 0;
+    padding-left: 0;
+    list-style: none;
+    width: 60vw;
+  }
 }
 
-main {
-  margin-left: 35%;
-}
+@media screen and (max-width:1150px) {
+  header {
+    margin-left: 10px;
+    margin-top: 500px;
+  }
 
-ol {
-  display: inline-block;
-  margin: 5px 0;
-  padding-left: 0;
-  list-style: none;
+  main {
+    margin: auto;
+    display: block;
+    width: 98%;
+  }
+
+  ol {
+    display: inline-block;
+    list-style: none;
+    width: 100%;
+  }
+
+  body {
+    margin: 0;
+  }
+
 }
 
 button {
@@ -41,16 +72,61 @@ p {
   margin-bottom: 0;
 }
 
-#sidenav {
-  height: 100%;
-  width: 30%;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: rgb(78 , 129 , 121);
-  overflow-x: hidden;
-  box-shadow: 0 0 5px 5px rgba(114 , 114 , 114 , 0.404);
+@media screen and (max-width:100vw) {
+  #sidenav {
+    height: 100vh;
+    width: 30%;
+    min-width: 400px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    margin: 0;
+    background-color: rgb(78 , 129 , 121);
+    overflow-x: hidden;
+    box-shadow: 0 0 5px 5px rgba(114 , 114 , 114 , 0.404);
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width:1150px) {
+  #sidenav {
+    height: 480px;
+    width: 100%;
+    min-width: 400px;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: rgb(78 , 129 , 121);
+    overflow-x: hidden;
+    box-shadow: 0 0 5px 5px rgba(114 , 114 , 114 , 0.404);
+    display: block;
+  }
+
+  #apaga-tudo {
+   width: 15%
+  }
+
+  #remover-finalizados {
+   width: 15%
+  }
+
+  #salvar-tarefas {
+   width: 15%
+  }
+
+  #remover-selecionado {
+   width: 15%
+  }
+
+  #mover-cima {
+   width: 15%
+  }
+
+  #mover-baixo {
+   width: 15%
+  }
 }
 
 #topSideMenu {
@@ -83,7 +159,7 @@ p {
 
 #texto-tarefa:focus {
   border-radius: 0;
-  background-color: -internal-light-dark white , rgb(187 , 187 , 187));
+  background-color: -internal-light-dark white , rgb(187 , 187 , 187);
   outline-color: white;
   box-shadow: 0 2px 10px 1px rgba(114 , 114 , 114 , 0.76);
 }
@@ -120,12 +196,13 @@ p {
 /* Menu do Input -- Final */
 
 /* Menu dos Botões -- Início */
-#menuBotoes {
+/* #menuBotoes {
   margin-left: 20px;
   margin-top: 20px;
-}
+} */
 
 #apaga-tudo {
+  margin: 20px 5px 0 20px;
   display: inline-block;
   border-radius: 50px;
   width: 43%;
@@ -149,10 +226,10 @@ p {
 }
 
 #remover-finalizados {
+  margin: 20px 0 0 5px;
   display: inline-block;
   border-radius: 50px;
   width: 43%;
-  margin-left: 10px;
   height: 45px;
   border: 0;
   background-color: rgb(199 , 199 , 199);
@@ -178,6 +255,7 @@ p {
 }
 
 #salvar-tarefas {
+  margin: 15px 5px 0 20px;
   display: inline-block;
   border-radius: 50px;
   width: 43%;
@@ -201,10 +279,10 @@ p {
 }
 
 #remover-selecionado {
+  margin: 20px 0 0 5px;
   display: inline-block;
   border-radius: 50px;
   width: 43%;
-  margin-left: 10px;
   height: 45px;
   border: 0;
   background-color: rgb(199 , 199 , 199);
@@ -230,6 +308,7 @@ p {
 }
 
 #mover-cima {
+  margin: 20px 5px 0 20px;
   display: inline-block;
   border-radius: 50px;
   width: 43%;
@@ -254,10 +333,10 @@ p {
 }
 
 #mover-baixo {
+  margin: 20px 0 0 5px;
   display: inline-block;
   border-radius: 50px;
   width: 43%;
-  margin-left: 10px;
   height: 45px;
   border: 0;
   background-color: rgb(160 , 9 , 67);
@@ -282,11 +361,11 @@ p {
 .tarefa {
   font-family: Roboto, sans-serif;
   padding: 15px;
-  margin: 12px 10px;
+  margin: 12px 0px;
   background-color: white;
-  max-width: 95%;
+  max-width: 100%;
   box-shadow: 0 2px 4px 1px rgba(73 , 73 , 73 , 0.61);
-  min-width: 55vw;
+  /* min-width: 100%; */
 }
 
 .selected {
