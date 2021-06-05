@@ -35,7 +35,7 @@ body {
 @media screen and (max-width:1150px) {
   header {
     margin-left: 10px;
-    margin-top: 500px;
+    margin-top: 150px;
   }
 
   main {
@@ -90,8 +90,8 @@ p {
 
 @media screen and (max-width:1150px) {
   #sidenav {
-    height: auto;
-    padding-bottom: 20px;
+    height: 100px;
+    padding-bottom: 100px;
     width: 100%;
     min-width: 400px;
     position: fixed;
@@ -380,7 +380,7 @@ p {
   }
 
   header {
-    margin-top: 700px;
+    margin-top: 230px;
   }
 }
 
